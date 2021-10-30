@@ -3,8 +3,10 @@ function ThankYou() {
     return (<>
         <h1>Thank you!</h1>
 
+        <h4>Feedback successfully submitted!</h4>
+
         <form>
-            <button>Leave New Feedback</button>
+            <button>Go Back To Home</button>
         </form>
     </>)
 }

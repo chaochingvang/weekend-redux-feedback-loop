@@ -1,5 +1,7 @@
 import React from 'react';
 import axios from 'axios';
+
+//components import
 import Home from '../Home/Home.jsx';
 import Feeling from '../Feeling/Feeling.jsx';
 import Understanding from '../Understanding/Understanding.jsx';

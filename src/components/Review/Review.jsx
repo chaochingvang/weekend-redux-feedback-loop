@@ -9,7 +9,10 @@ function Review() {
         <p>Comments: </p>
 
         <form>
-            <button>Submit</button>
+            <div>
+                <button>Back</button>
+                <button>Submit</button>
+            </div>
         </form>
     </>)
 }

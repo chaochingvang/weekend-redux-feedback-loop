@@ -29,9 +29,9 @@
 [x]Review
     [x]text showing scores
     [x]button
-[]Submitted
-    []Thank you text
-    []Button
+[x]Submitted
+    [x]Thank you text
+    [x]Button
 []Admin (STRETCH)
     []feedback results text
     []Table
@@ -65,6 +65,7 @@
 [] return {...state, action.payload}
 
 ## FUNCTIONALITIES
+[]react-router-dom create paths
 []Home?
     []onClick - history.push() move to Feeling component
 []Feeling, Understanding, Support, Comments

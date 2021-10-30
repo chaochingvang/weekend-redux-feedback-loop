@@ -12,7 +12,10 @@ function Understanding() {
                 min="1"
                 max="5"
                 required />
-            <button>Next</button>
+            <div>
+                <button>Back</button>
+                <button>Next</button>
+            </div>
         </form>
     </>)
 }

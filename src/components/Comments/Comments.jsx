@@ -17,7 +17,10 @@ function Comments() {
                 value={comment}
                 onChange={(event) => setComment(event.target.value)}
                 required></textarea>
-            <button>Next</button>
+            <div>    
+                <button>Back</button>
+                <button>Next</button>
+            </div>
         </form>
     </>)
 }
