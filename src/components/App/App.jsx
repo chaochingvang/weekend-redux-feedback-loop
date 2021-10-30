@@ -1,5 +1,6 @@
 import React from 'react';
-import axios from 'axios';
+import { Route, HashRouter as Router, Link } from 'react-router-dom';
+
 
 //components import
 import Home from '../Home/Home.jsx';
@@ -14,23 +15,39 @@ import './App.css';
 function App() {
 
   return (
-    <div className='App'>
-      <Home />
+    <Router>
+      <div className='App'>
+        <Route path="/" exact>
+          <Home />
+        </Route>
 
-      <Feeling />
+        <Route path="/feeling">
+          <Feeling />
+        </Route>
 
-      <Understanding />
+        <Route path="/understanding">
+          <Understanding />
+        </Route>
 
-      <Support />
+        <Route path="/support">
+          <Support />
+        </Route>
 
-      <Comments />
+        <Route path="/comments">
+          <Comments />
+        </Route>
 
-      <Review />
+        <Route path="/review">
+          <Review />
+        </Route>
 
-      <ThankYou />
+        <Route path="/thankyou">
+          <ThankYou />
+        </Route>
 
 
-    </div>
+      </div>
+    </Router>
   );
 }
 

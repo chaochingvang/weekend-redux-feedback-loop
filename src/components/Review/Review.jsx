@@ -1,5 +1,17 @@
+import { useHistory } from "react-router";
+
 function Review() {
     
+    const history = useHistory();
+
+    const handleBack = () => {
+        history.push(`/comments`);
+    }
+
+    const handleSubmit = () => {
+        history.push(`/thankyou`);
+    }
+
     return (<>
         <h1>Review Your Feedback</h1>
 
@@ -8,10 +20,10 @@ function Review() {
         <p>Support: </p>
         <p>Comments: </p>
 
-        <form>
+        <form onSubmit={handleSubmit}>
             <div>
-                <button>Back</button>
-                <button>Submit</button>
+                <button onClick={handleBack}>Back</button>
+                <button type="submit">Submit</button>
             </div>
         </form>
     </>)
