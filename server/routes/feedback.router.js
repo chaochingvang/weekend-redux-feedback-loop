@@ -41,4 +41,24 @@ router.post(`/`, (req, res) => {
         });
 });
 
+router.delete(`/:id`, (req, res) => {
+    let id = req.params.id;
+
+    let queryText = `
+        DELETE FROM "feedback"
+        WHERE "id" = $1;
+    `;
+
+    let values = [id];
+
+    pool.query(queryText, values)
+        .then((result) => {
+            console.log(`Successfully deleted ID #`, id);
+            res.sendStatus(200);
+        }).catch((error) => {
+            console.log(`ERROR! Unable to delete`, error);
+            res.sendStatus(500);
+        });
+})
+
 module.exports = router;
