@@ -10,6 +10,7 @@ import Support from '../Support/Support.jsx';
 import Comments from '../Comments/Comments.jsx';
 import Review from '../Review/Review.jsx';
 import ThankYou from '../ThankYou/ThankYou.jsx';
+import Admin from '../Admin/Admin.jsx';
 import './App.css';
 
 function App() {
@@ -45,6 +46,9 @@ function App() {
           <ThankYou />
         </Route>
 
+        <Route path="/admin">
+          <Admin />
+        </Route>
 
       </div>
     </Router>

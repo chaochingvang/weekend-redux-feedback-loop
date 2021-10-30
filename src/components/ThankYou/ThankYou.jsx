@@ -9,9 +9,7 @@ function ThankYou() {
 
         <h4>Feedback successfully submitted!</h4>
 
-        <form>
-            <button onClick={() => history.push(`/`)}>Go Back To Home</button>
-        </form>
+        <button onClick={() => history.push(`/`)}>Go Back To Home</button>
     </>)
 }
 export default ThankYou;
