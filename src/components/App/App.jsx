@@ -5,6 +5,8 @@ import Feeling from '../Feeling/Feeling.jsx';
 import Understanding from '../Understanding/Understanding.jsx';
 import Support from '../Support/Support.jsx';
 import Comments from '../Comments/Comments.jsx';
+import Review from '../Review/Review.jsx';
+import ThankYou from '../ThankYou/ThankYou.jsx';
 import './App.css';
 
 function App() {
@@ -20,6 +22,10 @@ function App() {
       <Support />
 
       <Comments />
+
+      <Review />
+
+      <ThankYou />
 
 
     </div>

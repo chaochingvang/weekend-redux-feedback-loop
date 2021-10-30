@@ -1,6 +1,10 @@
+import { useState } from "react";
 import Header from "../Header/Header.jsx";
 
 function Comments() {
+    const [comment, setComment] = useState(``);
+
+    console.log(comment);
 
     return (<>
         <Header />
@@ -10,6 +14,8 @@ function Comments() {
             <label htmlFor="comments">Comments:</label>
             <textarea
                 name="comments"
+                value={comment}
+                onChange={(event) => setComment(event.target.value)}
                 required></textarea>
             <button>Next</button>
         </form>

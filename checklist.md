@@ -22,13 +22,13 @@
             []Admin Data
 
 [x]Home?
-[]Feeling, Understanding, Support, Comments
+[x]Feeling, Understanding, Support, Comments
     [x]Header
-    []Input
-    []Button
-[]Review
-    []text showing scores
-    []button
+    [x]Input
+    [x]Button
+[x]Review
+    [x]text showing scores
+    [x]button
 []Submitted
     []Thank you text
     []Button
