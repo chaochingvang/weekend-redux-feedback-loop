@@ -40,12 +40,12 @@
 
 
 ## SERVER - ROUTE - CRUD
-[]create route `/feedback`
-[]export route to server.js / import route
-[]POST request for submit
-    []INSERT INTO "feedback" ("feeling", "understanding", "support", "comments")
+[x]create route `/feedback`
+[x]export route to server.js / import route
+[x]POST request for submit
+    [x]INSERT INTO "feedback" ("feeling", "understanding", "support", "comments")
     VALUES ($1, $2, $3, $4);
-    []feedback.feeling, 
+    [x]feedback.feeling, 
         feedback.understanding, 
         feedback.support, 
         feedback.comments
@@ -55,14 +55,14 @@
 []DELETE request for admin (STRETCH)
 
 ## INDEX JS
-[]feedback reducer as object
+[x]feedback reducer as object
     const feedback = {
         feeling:
         understanding:
         support:
         comments:
     }
-[] return {...state, action.payload}
+[x] return {...state, action.payload}
 
 ## FUNCTIONALITIES
 []react-router-dom create paths
