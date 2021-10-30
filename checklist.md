@@ -5,7 +5,7 @@
 [x] copy paste execute `data.sql`
 
 ## BASIC CLIENT HTML JSX
-[]Create Components
+[x]Create Components
     [x]Home?
     [x]Feeling
         [x]Header
@@ -17,9 +17,9 @@
         [x]Header
     [x]Review
     [x]Submitted
-    []Admin (STRETCH)
-        []Admin Table
-            []Admin Data
+    [x]Admin (STRETCH)
+        [x]Admin Table
+            [x]Admin Data
 
 [x]Home?
 [x]Feeling, Understanding, Support, Comments
@@ -32,11 +32,11 @@
 [x]Submitted
     [x]Thank you text
     [x]Button
-[]Admin (STRETCH)
-    []feedback results text
-    []Table
-        []data
-        []delete btn
+[x]Admin (STRETCH)
+    [x]feedback results text
+    [x]Table
+        [x]data
+        [x]delete btn
 
 
 ## SERVER - ROUTE - CRUD
@@ -49,10 +49,9 @@
         feedback.understanding, 
         feedback.support, 
         feedback.comments
-[]GET request for admin (STRETCH)
-    []store response.rows in local state
-    [].map render
-[]DELETE request for admin (STRETCH)
+[x]GET request for admin (STRETCH)
+    [x]store response.rows in local state
+[x]DELETE request for admin (STRETCH)
 
 ## INDEX JS
 [x]feedback reducer as object

@@ -45,6 +45,9 @@ function Admin() {
                         getFeedbackList={getFeedbackList}
                     />
                 ))}
+                <tr>
+                    <td colSpan="6">&nbsp;</td>
+                </tr>
             </tbody>
         </table>
     </>)
