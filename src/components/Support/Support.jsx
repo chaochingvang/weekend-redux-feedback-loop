@@ -1,15 +1,26 @@
+import { useState } from "react";
+import { useDispatch } from "react-redux";
 import { useHistory } from "react-router";
 import Header from "../Header/Header.jsx";
 
 function Support() {
 
+    const dispatch = useDispatch();
     const history = useHistory();
+    const [support, setSupport] = useState(``);
 
     const handleBack = () => {
         history.push(`/understanding`);
     }
 
-    const handleNext = () => {
+    const handleNext = (event) => {
+        event.preventDefault();
+
+        dispatch({
+            type: `ADD_SUPPORT`,
+            payload: support
+        })
+
         history.push(`/comments`);
     }
 
@@ -23,6 +34,8 @@ function Support() {
                 type="number"
                 min="1"
                 max="5"
+                value={support}
+                onChange={(event) => setSupport(event.target.value)}
                 required />
             <div>
                 <button onClick={handleBack}>Back</button>

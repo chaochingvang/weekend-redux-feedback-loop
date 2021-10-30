@@ -1,17 +1,30 @@
+import { useState } from "react";
+import { useDispatch } from "react-redux";
 import { useHistory } from "react-router";
 import Header from "../Header/Header.jsx";
 
 function Feeling() {
 
     const history = useHistory();
+    const dispatch = useDispatch();
+    const [feeling, setFeeling] = useState(``);
 
     const handleBack = () => {
         history.push(`/`);
     }
 
-    const handleNext = () => {
+    const handleNext = (event) => {
+        event.preventDefault();
+        
+        dispatch({
+            type: `ADD_FEELING`,
+            payload: feeling
+        })
+
         history.push(`/understanding`);
     }
+
+    console.log(feeling);
 
     return (<>
         <Header />
@@ -23,6 +36,8 @@ function Feeling() {
                 type="number"
                 min="1"
                 max="5"
+                value={feeling}
+                onChange={(event) => setFeeling(event.target.value)}
                 required />
             <div>
                 <button onClick={handleBack}>Back</button>

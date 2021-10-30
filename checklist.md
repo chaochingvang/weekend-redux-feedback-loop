@@ -65,17 +65,17 @@
 [x] return {...state, action.payload}
 
 ## FUNCTIONALITIES
-[]react-router-dom create paths
-[]Home?
-    []onClick - history.push() move to Feeling component
+[x]react-router-dom create paths
+[x]Home?
+    [x]onClick - history.push() move to Feeling component
 []Feeling, Understanding, Support, Comments
     []onClick - dispatch payload.``
-    [] history.push
-    []input validation -> cannot go next if empty
+    [x] history.push
+    [x]input validation -> cannot go next if empty
 []Review
     []useSelector feedback and display
     []onClick -> post with feedback object
-    [] history.push
+    [x] history.push
 []Submitted
-    []buttn to start new feedback
-    []history.push
+    [x]buttn to go home screen
+    [x]history.push

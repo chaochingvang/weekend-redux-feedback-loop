@@ -1,16 +1,25 @@
 import { useState } from "react";
+import { useDispatch } from "react-redux";
 import { useHistory } from "react-router";
 import Header from "../Header/Header.jsx";
 
 function Comments() {
+    const dispatch = useDispatch();
     const history = useHistory();
-    const [comment, setComment] = useState(``);
+    const [comments, setComments] = useState(``);
 
     const handleBack = () => {
         history.push(`/support`);
     }
 
-    const handleNext = () => {
+    const handleNext = (event) => {
+        event.preventDefault();
+
+        dispatch({
+            type: `ADD_COMMENTS`,
+            payload: comments
+        })
+
         history.push(`/review`);
     }
 
@@ -22,8 +31,8 @@ function Comments() {
             <p>Please enter your comments below:</p>
             <textarea
                 name="comments"
-                value={comment}
-                onChange={(event) => setComment(event.target.value)}>
+                value={comments}
+                onChange={(event) => setComments(event.target.value)}>
                 </textarea>
             <div>    
                 <button onClick={handleBack}>Back</button>
