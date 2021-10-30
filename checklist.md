@@ -21,9 +21,9 @@
         []Admin Table
             []Admin Data
 
-[]Home?
+[x]Home?
 []Feeling, Understanding, Support, Comments
-    []Header
+    [x]Header
     []Input
     []Button
 []Review
@@ -70,6 +70,7 @@
 []Feeling, Understanding, Support, Comments
     []onClick - dispatch payload.``
     [] history.push
+    []input validation -> cannot go next if empty
 []Review
     []useSelector feedback and display
     []onClick -> post with feedback object
