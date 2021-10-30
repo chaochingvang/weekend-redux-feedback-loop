@@ -1,6 +1,8 @@
 import axios from "axios";
+import moment from 'moment';
 
 function AdminItem({ item, getFeedbackList }) {
+
 
     const handleDelete = () => {
 
@@ -8,6 +10,7 @@ function AdminItem({ item, getFeedbackList }) {
 
     return (<>
         <tr>
+            <td>{moment(item.date).format(`MM/DD/YYYY`)}</td>
             <td>{item.feeling}</td>
             <td>{item.understanding}</td>
             <td>{item.support}</td>

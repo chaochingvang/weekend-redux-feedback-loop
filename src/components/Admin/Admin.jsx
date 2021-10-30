@@ -29,6 +29,7 @@ function Admin() {
         <table>
             <thead>
                 <tr>
+                    <th>Date</th>
                     <th>Feeling</th>
                     <th>Comprehension</th>
                     <th>Support</th>
