@@ -1,22 +1,22 @@
 ### CHECKLIST ###
 
 ## DATABASE
-[] Create database `"prime_feedback"`
-[] copy paste execute `data.sql`
+[x] Create database `"prime_feedback"`
+[x] copy paste execute `data.sql`
 
 ## BASIC CLIENT HTML JSX
 []Create Components
-    []Home?
-    []Feeling
-        []Header
-    []Understanding
-        []Header
-    []Support
-        []Header
-    []Comments
-        []Header
-    []Review
-    []Submitted
+    [x]Home?
+    [x]Feeling
+        [x]Header
+    [x]Understanding
+        [x]Header
+    [x]Support
+        [x]Header
+    [x]Comments
+        [x]Header
+    [x]Review
+    [x]Submitted
     []Admin (STRETCH)
         []Admin Table
             []Admin Data
@@ -67,5 +67,13 @@
 ## FUNCTIONALITIES
 []Home?
     []onClick - history.push() move to Feeling component
-[]Feeling
-    []onClick - dispatch payload.feeling
+[]Feeling, Understanding, Support, Comments
+    []onClick - dispatch payload.``
+    [] history.push
+[]Review
+    []useSelector feedback and display
+    []onClick -> post with feedback object
+    [] history.push
+[]Submitted
+    []buttn to start new feedback
+    []history.push
