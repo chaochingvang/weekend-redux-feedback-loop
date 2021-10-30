@@ -1,24 +1,45 @@
+import { useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
 import { useHistory } from "react-router";
+import axios from "axios";
 
 function Review() {
-    
+
     const history = useHistory();
+    const dispatch = useDispatch();
+    const feedback = useSelector(store => store.feedbackReducer);
 
     const handleBack = () => {
         history.push(`/comments`);
     }
 
-    const handleSubmit = () => {
-        history.push(`/thankyou`);
+    const handleSubmit = (event) => {
+        event.preventDefault();
+
+        axios({
+            method: `POST`,
+            url: `/feedback`,
+            data: feedback
+        }).then((response) => {
+            console.log(`Feedback successfully submitted`);
+            dispatch({
+                type: `ON_SUBMIT`
+            });
+            history.push(`/thankyou`);
+        }).catch((error) => {
+            console.log(`ERROR! Unable to submit`, error);
+        })
+
+
     }
 
     return (<>
         <h1>Review Your Feedback</h1>
 
-        <p>Feeling: </p>
-        <p>Understanding: </p>
-        <p>Support: </p>
-        <p>Comments: </p>
+        <p>Feeling: {feedback.feeling}</p>
+        <p>Understanding: {feedback.understanding}</p>
+        <p>Support: {feedback.support}</p>
+        <p>Comments: {feedback.comments}</p>
 
         <form onSubmit={handleSubmit}>
             <div>

@@ -68,14 +68,14 @@
 [x]react-router-dom create paths
 [x]Home?
     [x]onClick - history.push() move to Feeling component
-[]Feeling, Understanding, Support, Comments
-    []onClick - dispatch payload.``
+[x]Feeling, Understanding, Support, Comments
+    [x]onClick - dispatch payload.``
     [x] history.push
     [x]input validation -> cannot go next if empty
-[]Review
-    []useSelector feedback and display
-    []onClick -> post with feedback object
+[x]Review
+    [x]useSelector feedback and display
+    [x]onClick -> post with feedback object
     [x] history.push
-[]Submitted
+[x]Submitted
     [x]buttn to go home screen
     [x]history.push
