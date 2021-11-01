@@ -2,12 +2,14 @@ import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { useHistory } from "react-router";
 import Header from "../Header/Header.jsx";
+import "./Feeling.css";
 
 //mui imports
 import { Button } from "@mui/material";
 import { Stack } from "@mui/material";
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
+import { TextField } from "@mui/material";
 
 function Feeling() {
 
@@ -38,7 +40,8 @@ function Feeling() {
         <h1>How are you feeling today?</h1>
         <form onSubmit={handleNext}>
             <p>Please enter a value from 1-5</p>
-            <input
+            <TextField
+                variant="outlined"
                 type="number"
                 min="1"
                 max="5"
