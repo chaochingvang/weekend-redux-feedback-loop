@@ -1,14 +1,16 @@
-import { useHistory } from "react-router";
+import { useHistory } from 'react-router';
 
 function Home() {
-    const history = useHistory();
+  const history = useHistory();
+  // RvdB: Absolutely love the title. :)
+  return (
+    <>
+      <h1>THE REFLECTION INJECTION</h1>
 
-    return (<>
-        <h1>THE REFLECTION INJECTION</h1>
-
-       
-        <button onClick={() => history.push(`/feeling`)}>Create New Feedback</button>
-
-    </>)
+      <button onClick={() => history.push(`/feeling`)}>
+        Create New Feedback
+      </button>
+    </>
+  );
 }
 export default Home;
