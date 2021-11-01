@@ -2,7 +2,6 @@ import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { useHistory } from "react-router";
 import Header from "../Header/Header.jsx";
-import "./Feeling.css";
 
 //mui imports
 import { Button } from "@mui/material";
