@@ -3,6 +3,12 @@ import { useDispatch } from "react-redux";
 import { useHistory } from "react-router";
 import Header from "../Header/Header.jsx";
 
+//mui imports
+import { Button } from "@mui/material";
+import { Stack } from "@mui/material";
+import ArrowBackIcon from '@mui/icons-material/ArrowBack';
+import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
+
 function Feeling() {
 
     const history = useHistory();
@@ -15,7 +21,7 @@ function Feeling() {
 
     const handleNext = (event) => {
         event.preventDefault();
-        
+
         dispatch({
             type: `ADD_FEELING`,
             payload: feeling
@@ -40,8 +46,29 @@ function Feeling() {
                 onChange={(event) => setFeeling(event.target.value)}
                 required />
             <div>
-                <button type="button" onClick={handleBack}>Back</button>
-                <button type="submit">Next</button>
+                <Stack
+                    direction="row"
+                    spacing={2}
+                    alignItems="center"
+                    justifyContent="center"
+                >
+                    <Button
+                        variant="contained"
+                        startIcon={<ArrowBackIcon />}
+                        type="button"
+                        onClick={handleBack}
+                    >
+                        Back
+                    </Button>
+                    <Button
+                        variant="contained"
+                        endIcon={<ArrowForwardIcon />}
+                        disabled={feeling === `` ? true : false}
+                        type="submit"
+                    >
+                        Next
+                    </Button>
+                </Stack>
             </div>
         </form>
     </>)
