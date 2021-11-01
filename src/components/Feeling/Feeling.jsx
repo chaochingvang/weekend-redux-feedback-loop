@@ -40,7 +40,7 @@ function Feeling() {
                 onChange={(event) => setFeeling(event.target.value)}
                 required />
             <div>
-                <button onClick={handleBack}>Back</button>
+                <button type="button" onClick={handleBack}>Back</button>
                 <button type="submit">Next</button>
             </div>
         </form>
