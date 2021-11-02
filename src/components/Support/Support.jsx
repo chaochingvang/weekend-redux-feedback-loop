@@ -3,6 +3,13 @@ import { useDispatch } from "react-redux";
 import { useHistory } from "react-router";
 import Header from "../Header/Header.jsx";
 
+//mui imports
+import { Button } from "@mui/material";
+import { Stack } from "@mui/material";
+import ArrowBackIcon from '@mui/icons-material/ArrowBack';
+import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
+import { TextField } from "@mui/material";
+
 function Support() {
 
     const dispatch = useDispatch();
@@ -30,7 +37,8 @@ function Support() {
         <h1>How well are you being supported?</h1>
         <form onSubmit={handleNext}>
             <p>Please enter a value from 1-5</p>
-            <input
+            <TextField
+                variant="outlined"
                 type="number"
                 min="1"
                 max="5"
@@ -38,8 +46,29 @@ function Support() {
                 onChange={(event) => setSupport(event.target.value)}
                 required />
             <div>
-                <button onClick={handleBack}>Back</button>
-                <button type="submit">Next</button>
+                <Stack
+                    direction="row"
+                    spacing={2}
+                    alignItems="center"
+                    justifyContent="center"
+                >
+                    <Button
+                        variant="contained"
+                        startIcon={<ArrowBackIcon />}
+                        type="button"
+                        onClick={handleBack}
+                    >
+                        Back
+                    </Button>
+                    <Button
+                        variant="contained"
+                        endIcon={<ArrowForwardIcon />}
+                        disabled={support === `` ? true : false}
+                        type="submit"
+                    >
+                        Next
+                    </Button>
+                </Stack>
             </div>
         </form>
     </>)
