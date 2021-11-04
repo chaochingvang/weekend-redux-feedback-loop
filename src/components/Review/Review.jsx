@@ -3,6 +3,13 @@ import { useSelector } from "react-redux";
 import { useHistory } from "react-router";
 import axios from "axios";
 
+//mui imports
+import { Button } from "@mui/material";
+import { Stack } from "@mui/material";
+import ArrowBackIcon from '@mui/icons-material/ArrowBack';
+import Card from '@mui/material/Card';
+import CardContent from '@mui/material/CardContent';
+
 function Review() {
 
     const history = useHistory();
@@ -34,19 +41,46 @@ function Review() {
     }
 
     return (<>
-        <h1>Review Your Feedback</h1>
+        <Card
+            variant="elevation"
+            elevation={24}
+        >
+            <CardContent>
+                <h1>Review Your Feedback</h1>
 
-        <p>Feeling: {feedback.feeling}</p>
-        <p>Understanding: {feedback.understanding}</p>
-        <p>Support: {feedback.support}</p>
-        <p>Comments: {feedback.comments}</p>
+                <p>Feeling: {feedback.feeling}</p>
+                <p>Understanding: {feedback.understanding}</p>
+                <p>Support: {feedback.support}</p>
+                <p>Comments: {feedback.comments}</p>
 
-        <form onSubmit={handleSubmit}>
-            <div>
-                <button onClick={handleBack}>Back</button>
-                <button type="submit">Submit</button>
-            </div>
-        </form>
+                <form onSubmit={handleSubmit}>
+                    <div>
+                        <Stack
+                            direction="row"
+                            spacing={2}
+                            alignItems="center"
+                            justifyContent="center"
+                        >
+                            <Button
+                                variant="contained"
+                                startIcon={<ArrowBackIcon />}
+                                type="button"
+                                onClick={handleBack}
+                            >
+                                Back
+                            </Button>
+                            <Button
+                                variant="contained"
+
+                                type="submit"
+                            >
+                                Submit
+                            </Button>
+                        </Stack>
+                    </div>
+                </form>
+            </CardContent>
+        </Card>
     </>)
 }
 export default Review;

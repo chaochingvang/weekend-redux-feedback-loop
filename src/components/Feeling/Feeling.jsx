@@ -9,6 +9,8 @@ import { Stack } from "@mui/material";
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import { TextField } from "@mui/material";
+import Card from '@mui/material/Card';
+import CardContent from '@mui/material/CardContent';
 
 function Feeling() {
 
@@ -22,20 +24,30 @@ function Feeling() {
 
     const handleNext = (event) => {
         event.preventDefault();
+        if (feeling >= 1 && feeling <= 5) {
+            dispatch({
+                type: `ADD_FEELING`,
+                payload: feeling
+            })
 
-        dispatch({
-            type: `ADD_FEELING`,
-            payload: feeling
-        })
-
-        history.push(`/understanding`);
+            history.push(`/understanding`);
+        }
+        else {
+            alert(`Please enter a value between 1 and 5!`)
+        }
     }
 
     console.log(feeling);
 
     return (<>
-        <Header />
+        
 
+        <Card
+            variant="elevation"
+            elevation={24}
+        >
+            <Header />
+            <CardContent>
         <h1>How are you feeling today?</h1>
         <form onSubmit={handleNext}>
             <p>Please enter a value from 1-5</p>
@@ -65,14 +77,16 @@ function Feeling() {
                     <Button
                         variant="contained"
                         endIcon={<ArrowForwardIcon />}
-                        disabled={feeling === `` ? true : false}
+                        // disabled={feeling === `` ? true : false}
                         type="submit"
                     >
                         Next
                     </Button>
                 </Stack>
             </div>
-        </form>
+            </form>
+            </CardContent>
+        </Card>
     </>)
 }
 export default Feeling;
